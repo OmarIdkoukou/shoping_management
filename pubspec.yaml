@@ -38,6 +38,8 @@ dependencies:
   # Building Helper UI
   responsive_sizer: ^3.1.1
   nb_utils: ^5.0.5
+  percent_indicator: ^4.2.2
+  neon: ^0.1.0
   # Animation
   animate_do: ^3.0.2
   device_preview: ^1.1.0

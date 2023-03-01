@@ -3,8 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:shopping_managment/screens/login_screen.dart';
-import 'package:shopping_managment/screens/create_new_product_screen.dart';
+import 'package:shopping_managment/screens/update_list_screen.dart';
 import '../utilites/app_config.dart';
 import '../utilites/app_functions.dart';
 import '../utilites/app_theme.dart';
@@ -33,7 +32,7 @@ class MyApp extends StatelessWidget {
                   navigatorKey: navigatorKey,
                   title: AppConfig.appName,
                   theme: AppTheme.lightTheme(color: snap.data),
-                  home: const LoginScreen() //const SplashScreen(),
+                  home: const UpdateListScreen() //const SplashScreen(),
                   );
             });
       },

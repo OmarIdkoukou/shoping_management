@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
+import '../constant/colors.dart';
 import '../widgets/container_settings.dart';
 
 class SettingScreen extends StatelessWidget {
@@ -11,7 +12,7 @@ class SettingScreen extends StatelessWidget {
     double h = MediaQuery.of(context).size.height;
     double w = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: AppColors.kGrey,
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
