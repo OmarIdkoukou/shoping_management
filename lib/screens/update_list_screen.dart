@@ -6,8 +6,7 @@ import 'package:shopping_managment/constant/colors.dart';
 import 'package:shopping_managment/utilites/app_config.dart';
 import 'package:shopping_managment/widgets/custom_app_bar_icon_widget.dart';
 import 'package:shopping_managment/widgets/custom_app_bar_widget.dart';
-import 'package:percent_indicator/percent_indicator.dart';
-import '../constant/dimentions.dart';
+import '../widgets/linear_percent_indicator.dart';
 import '../widgets/product_bought_widget.dart';
 
 class UpdateListScreen extends StatelessWidget {
