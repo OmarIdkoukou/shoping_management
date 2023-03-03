@@ -11,6 +11,7 @@ Widget buildCustomTextWidget({
   String? helperText,
   int? maxLength,
   TextEditingController? textEditingController,
+  Widget? suffixIcon,
 }) =>
     TextFormField(
       autovalidateMode: AutovalidateMode.onUserInteraction,
@@ -26,6 +27,7 @@ Widget buildCustomTextWidget({
           borderSide: BorderSide.none,
         ),
         hintText: hintText,
+        suffixIcon:suffixIcon ,
         helperText: helperText,
         helperStyle: TextStyle(color: Colors.grey.shade300),
         hintStyle: TextStyle(

@@ -12,7 +12,6 @@ class SettingScreen extends StatelessWidget {
     double h = MediaQuery.of(context).size.height;
     double w = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: AppColors.kGrey,
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
@@ -20,7 +19,7 @@ class SettingScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: 0.08 * h,
+              height: 0.04 * h,
             ),
             Padding(
               padding: const EdgeInsets.only(top: 8.0, bottom: 2.0),

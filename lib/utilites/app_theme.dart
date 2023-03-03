@@ -12,7 +12,7 @@ class AppTheme {
         primarySwatch:
             AppFunctions.createMaterialColor(color ?? AppColors.primaryColor),
         primaryColor: AppColors.primaryColor,
-        scaffoldBackgroundColor: Colors.white,
+        scaffoldBackgroundColor:AppColors.fillColor,
         fontFamily: 'Mustica Pro',
         useMaterial3: true,
         bottomNavigationBarTheme:
