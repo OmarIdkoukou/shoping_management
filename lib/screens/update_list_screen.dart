@@ -23,7 +23,7 @@ class UpdateListScreen extends StatelessWidget {
           actions: [customAppBarIconWidget(iconData: Icons.more_vert_outlined)],
           backgroundColor: AppColors.fillColor),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 20.0),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -37,6 +37,13 @@ class UpdateListScreen extends StatelessWidget {
                     AppColors.secondaryColor,
                   ],
                 ),
+                boxShadow: [
+                  BoxShadow(
+                    color: AppColors.secondaryColor,
+                    blurRadius: 20.0,
+                    offset: const Offset(0.0, 0.25),
+                  )
+                ],
               ),
               child: Padding(
                 padding: const EdgeInsets.symmetric(
@@ -111,12 +118,15 @@ class UpdateListScreen extends StatelessWidget {
               ),
             ),
             (6.h).toInt().height,
-            Text(
-              "Products bought.",
-              style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.bold),
+            Padding(
+              padding: const EdgeInsets.only(left: 15.0),
+              child: Text(
+                "Products bought.",
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.bold),
+              ),
             ),
             (1.h).toInt().height,
             Expanded(
@@ -134,8 +144,7 @@ class UpdateListScreen extends StatelessWidget {
                                   quantity: e["quantity"],
                                   brandName: e["brandName"]),
                             ))
-                        .toList()
-                    ))
+                        .toList()))
           ],
         ),
       ),

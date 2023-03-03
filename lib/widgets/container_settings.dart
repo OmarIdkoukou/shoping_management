@@ -24,7 +24,7 @@ class ContainerSettings extends StatelessWidget {
         borderRadius: BorderRadius.circular(18.0),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.symmetric(horizontal: 14.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
