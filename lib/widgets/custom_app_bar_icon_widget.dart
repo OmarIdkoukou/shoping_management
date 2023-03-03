@@ -8,7 +8,7 @@ Widget customAppBarIconWidget(
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
-          height: 8.h,
+          height: 5.h,
           width: 10.w,
           decoration: BoxDecoration(
             color: Colors.grey[200],

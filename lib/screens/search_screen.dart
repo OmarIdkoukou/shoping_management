@@ -27,7 +27,7 @@ class SearchScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(12.0),
+          padding: const EdgeInsets.all(30.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -63,6 +63,7 @@ class SearchScreen extends StatelessWidget {
                           price:e["price"],
                           isDown: true,
                           withArrow: false,
+                          withoutQuantity: false,
                           quantity: "",
                           brandName: e["brandName"],
                         ),

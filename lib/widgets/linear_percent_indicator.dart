@@ -304,7 +304,7 @@ class _LinearPercentIndicatorState extends State<LinearPercentIndicator>
     return Material(
       color: Colors.transparent,
       child: SizedBox(
-          height: 12,
+         // height: 100,
           child:Column(
             children: [
               widget.overWidget!,

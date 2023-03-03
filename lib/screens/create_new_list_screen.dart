@@ -17,25 +17,28 @@ class CreateNewListScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar:customAppBarWidget(context: context,title: "Create new List"),
-      body: Column(
-        children: AppData.productData
-            .map<Widget>(
-              (e) => Padding(
-                padding: EdgeInsets.symmetric(vertical: .015 * h),
-                child: FadeInDown(
-                  duration: Duration(milliseconds: e["duration"]),
-                  child: buildCustomTextWidget(
-                    hintText: e["hint"],
-                    fillColor: Colors.grey.shade200.withOpacity(0.85),
-                    hintColor: Colors.grey.shade300,
-                    helperText: e["helperText"],
-                    maxLength: e["maxLines"],
-                    textEditingController: controller[e["id"]],
-                  ),
+      body:Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 25.0,vertical: 10),
+        child: Column(
+          children: AppData.productData
+              .map<Widget>(
+                (e) => Padding(
+              padding: EdgeInsets.symmetric(vertical: .015 * h),
+              child: FadeInDown(
+                duration: Duration(milliseconds: e["duration"]),
+                child: buildCustomTextWidget(
+                  hintText: e["hint"],
+                  fillColor: Colors.grey.shade200.withOpacity(0.85),
+                  hintColor: Colors.grey.shade300,
+                  helperText: e["helperText"],
+                  maxLength: e["maxLines"],
+                  textEditingController: controller[e["id"]],
                 ),
               ),
-            )
-            .toList(),
+            ),
+          )
+              .toList(),
+        ),
       ),
       floatingActionButton: buildFloatingActionButton(
         h: h,

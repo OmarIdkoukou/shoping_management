@@ -21,7 +21,7 @@ class CreateNewProductScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: customAppBarWidget(context: context, title: "Create new product"),
       body: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all( 20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -29,20 +29,20 @@ class CreateNewProductScreen extends StatelessWidget {
               children: AppData.productData
                   .map<Widget>(
                     (e) => Padding(
-                      padding: EdgeInsets.symmetric(vertical: .015 * h),
-                      child: FadeInDown(
-                        duration: Duration(milliseconds: e["duration"]),
-                        child: buildCustomTextWidget(
-                          hintText: e["hint"],
-                          fillColor: Colors.grey.shade200.withOpacity(0.85),
-                          hintColor: Colors.grey.shade300,
-                          helperText: e["helperText"],
-                          maxLength: e["maxLines"],
-                          textEditingController: controller[e["id"]],
-                        ),
-                      ),
+                  padding: EdgeInsets.symmetric(vertical: .015 * h),
+                  child: FadeInDown(
+                    duration: Duration(milliseconds: e["duration"]),
+                    child: buildCustomTextWidget(
+                      hintText: e["hint"],
+                      fillColor: Colors.grey.shade200.withOpacity(0.85),
+                      hintColor: Colors.grey.shade300,
+                      helperText: e["helperText"],
+                      maxLength: e["maxLines"],
+                      textEditingController: controller[e["id"]],
                     ),
-                  )
+                  ),
+                ),
+              )
                   .toList(),
             ),
           ],
