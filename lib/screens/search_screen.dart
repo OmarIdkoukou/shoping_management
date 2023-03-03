@@ -77,6 +77,7 @@ class SearchScreen extends StatelessWidget {
       floatingActionButton: buildFloatingActionButton(
         h: h,
         w: h,
+        iconData: Icons.add
 
       ),
     );

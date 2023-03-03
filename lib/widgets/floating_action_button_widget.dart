@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import '../constant/colors.dart';
 
 Widget buildFloatingActionButton(
-        {required double h, required double w, void Function()? onTap}) =>
+        {required double h,
+        required double w,
+        void Function()? onTap,
+        IconData? iconData}) =>
     Card(
       elevation: 18,
       shape: RoundedRectangleBorder(
@@ -24,12 +27,12 @@ Widget buildFloatingActionButton(
                   AppColors.primaryColor,
                 ]),
           ),
-          child: const Icon(
-            Icons.check,
+          child: Icon(
+            iconData ?? Icons.check,
             color: Colors.white,
             size: 30,
             fill: 0.8,
-            shadows: <Shadow>[
+            shadows: const <Shadow>[
               Shadow(color: Colors.transparent, blurRadius: 15.0)
             ],
           ),
