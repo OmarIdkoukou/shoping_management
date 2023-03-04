@@ -27,93 +27,133 @@ class UpdateListScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              height: 0.23 * h,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(25),
-                gradient: LinearGradient(
-                  colors: [
-                    AppColors.primaryColor,
-                    AppColors.secondaryColor,
-                  ],
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 5.0),
+              child: Material(
+                elevation: 15.0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(40),
                 ),
-                boxShadow: [
-                  BoxShadow(
-                    color: AppColors.secondaryColor,
-                    blurRadius: 20.0,
-                    offset: const Offset(0.0, 0.25),
-                  )
-                ],
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 30.0, vertical: 30.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                      child: Text.rich(
-                        TextSpan(
-                          children: [
-                            TextSpan(
-                              text: "My best list ever \n",
-                              style: TextStyle(
-                                  fontSize: 21.sp, color: Colors.white),
-                            ),
-                            TextSpan(
-                              text: "7.December 2023  .  Walmart\n",
-                              style: TextStyle(
-                                  fontSize: 15.sp,
-                                  color: AppColors.kGrey?.withOpacity(0.7)),
-                            ),
-                          ],
-                        ),
-                      ),
+                shadowColor: AppColors.primaryColor,
+                child: Container(
+                  height: 0.23 * h,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(40),
+                    gradient: LinearGradient(
+                      colors: [
+                        AppColors.primaryColor,
+                        AppColors.secondaryColor,
+                      ],
                     ),
-                    //   (0.6.h).toInt().height,
-                    Expanded(
-                      child: LinearPercentIndicator(
-                        lineHeight: 11.0,
-                        percent: 0.8,
-                        // width: 50,
-                        barRadius: const Radius.circular(8),
-                        backgroundColor: Colors.transparent,
-                        progressColor: Colors.white,
-                        curve: Curves.easeIn,
-                        clipLinearGradient: true,
-                        fillColor: Colors.white,
-                        overWidget: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                "110${AppConfig.appCurrency}",
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 16.sp),
-                              ),
-                              Text(
-                                "200${AppConfig.appCurrency}",
-                                style: TextStyle(
-                                    color: AppColors.kGrey?.withOpacity(0.5),
-                                    fontSize: 16.sp),
-                              )
-                            ],
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 30.0, vertical: 30.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        ListTile(
+                          title: Text(
+                            "My best list ever",
+                            style:
+                                TextStyle(fontSize: 21.sp, color: Colors.white),
+                          ),
+                          dense: false,
+                          contentPadding: EdgeInsets.zero,
+                          subtitle: Text(
+                            "7.December 2023  .  Walmart\n",
+                            style: TextStyle(
+                                fontSize: 15.sp,
+                                color: AppColors.kGrey?.withOpacity(0.7)),
+                          ),
+                          trailing: const Icon(
+                            Icons.more_vert,
+                            color: Colors.white,
                           ),
                         ),
-                        center: Container(
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              border:
-                                  Border.all(color: Colors.white, width: 2)),
-                        ),
+                        // Padding(
+                        //     padding:
+                        //         const EdgeInsets.symmetric(horizontal: 8.0),
+                        //     child: Row(
+                        //      //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        //       crossAxisAlignment: CrossAxisAlignment.center,
+                        //       children: [
+                        //         Expanded(
+                        //           child: Text.rich(
+                        //             TextSpan(
+                        //               children: [
+                        //                 TextSpan(
+                        //                   text: "My best list ever \n",
+                        //                   style: TextStyle(
+                        //                       fontSize: 21.sp,
+                        //                       color: Colors.white),
+                        //                 ),
+                        //                 TextSpan(
+                        //                   text: "7.December 2023  .  Walmart\n",
+                        //                   style: TextStyle(
+                        //                       fontSize: 15.sp,
+                        //                       color: AppColors.kGrey
+                        //                           ?.withOpacity(0.7)),
+                        //                 ),
+                        //               ],
+                        //             ),
+                        //           ),
+                        //         ),
+                        //         const Padding(
+                        //           padding: EdgeInsets.only(bottom: 30,right: 10),
+                        //           child: Icon(
+                        //             Icons.more_vert,
+                        //             color: Colors.white,
+                        //           ),
+                        //         )
+                        //       ],
+                        //     )),
+                        //   (0.6.h).toInt().height,
+                        Expanded(
+                          child: LinearPercentIndicator(
+                            lineHeight: 11.0,
+                            percent: 0.8,
+                            barRadius: const Radius.circular(8),
+                            backgroundColor: Colors.transparent,
+                            progressColor: Colors.white,
+                            curve: Curves.easeIn,
+                            clipLinearGradient: true,
+                            fillColor: Colors.white,
+                            overWidget: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "110${AppConfig.appCurrency}",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 16.sp),
+                                  ),
+                                  Text(
+                                    "200${AppConfig.appCurrency}",
+                                    style: TextStyle(
+                                        color:
+                                            AppColors.kGrey?.withOpacity(0.5),
+                                        fontSize: 16.sp),
+                                  )
+                                ],
+                              ),
+                            ),
+                            center: Container(
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8),
+                                  border: Border.all(
+                                      color: Colors.white, width: 2)),
+                            ),
 
-                        // widgetIndicator:
-                      ),
+                            // widgetIndicator:
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
+                  ),
                 ),
               ),
             ),

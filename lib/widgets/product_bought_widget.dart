@@ -17,7 +17,7 @@ Widget buildProductBoughtWidget({
 }) =>
     Container(
       height: h * 0.1,
-      width: w*0.75,
+    //  width: w * 0.75,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(kBorderRadius + 3),

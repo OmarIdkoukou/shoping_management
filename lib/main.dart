@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
                   navigatorKey: navigatorKey,
                   title: AppConfig.appName,
                   theme: AppTheme.lightTheme(color: snap.data),
-                  home: const CreateNewListScreen() //const SplashScreen(),
+                  home: const UpdateListScreen() //const SplashScreen(),
                   );
             });
       },

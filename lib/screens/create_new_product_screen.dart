@@ -18,28 +18,31 @@ class CreateNewProductScreen extends StatelessWidget {
     List<TextEditingController> controller = List.generate(
         AppData.productData.length, (i) => TextEditingController());
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: customAppBarWidget(context: context, title: "Create new product"),
+      backgroundColor: Colors.transparent,
+      appBar: customAppBarWidget(
+          context: context,
+          title: "Create new product",
+          backgroundColor: Colors.transparent),
       body: Padding(
-        padding: const EdgeInsets.all( 25.0),
+        padding: const EdgeInsets.all(25.0),
         child: Column(
           children: AppData.productData
               .map<Widget>(
                 (e) => Padding(
-              padding: EdgeInsets.symmetric(vertical: .015 * h),
-              child: FadeInDown(
-                duration: Duration(milliseconds: e["duration"]),
-                child: buildCustomTextWidget(
-                  hintText: e["hint"],
-                  fillColor: Colors.grey.shade200.withOpacity(0.85),
-                  hintColor: Colors.grey.shade300,
-                  helperText: e["helperText"],
-                  maxLength: e["maxLines"],
-                  textEditingController: controller[e["id"]],
+                  padding: EdgeInsets.symmetric(vertical: .015 * h),
+                  child: FadeInDown(
+                    duration: Duration(milliseconds: e["duration"]),
+                    child: buildCustomTextWidget(
+                      hintText: e["hint"],
+                      fillColor: Colors.grey.shade200.withOpacity(0.85),
+                      hintColor: Colors.grey.shade300,
+                      helperText: e["helperText"],
+                      maxLength: e["maxLines"],
+                      textEditingController: controller[e["id"]],
+                    ),
+                  ),
                 ),
-              ),
-            ),
-          )
+              )
               .toList(),
         ),
       ),

@@ -27,18 +27,21 @@ class SearchScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(30.0),
+          padding: const EdgeInsets.all(25.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              buildCustomTextWidget(
-                hintColor: AppColors.kGrey,
-                hintText: "I'm searching for ...",
-                fillColor: AppColors.kGrey?.withOpacity(0.5),
-                suffixIcon: Icon(
-                  CupertinoIcons.search,
-                  color: AppColors.kGrey,
-                  size: 20,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 0.0),
+                child: buildCustomTextWidget(
+                  hintColor: AppColors.kGrey,
+                  hintText: "I'm searching for ...",
+                  fillColor: AppColors.kGrey?.withOpacity(0.5),
+                  suffixIcon: Icon(
+                    CupertinoIcons.search,
+                    color: AppColors.kGrey,
+                    size: 20,
+                  ),
                 ),
               ),
               4.h.toInt().height,
@@ -55,7 +58,7 @@ class SearchScreen extends StatelessWidget {
                 children: AppData.dummyProductList
                     .map<Widget>(
                       (e) => Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.symmetric(vertical: 8.0),
                         child: buildProductBoughtWidget(
                           h: h,
                           w: w,

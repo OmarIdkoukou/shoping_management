@@ -15,10 +15,10 @@ class CreateNewListScreen extends StatelessWidget {
     List<TextEditingController> controller = List.generate(
         AppData.productData.length, (i) => TextEditingController());
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar:customAppBarWidget(context: context,title: "Create new List"),
+     backgroundColor: Colors.transparent,
+      appBar:customAppBarWidget(context: context,title: "Create new List",backgroundColor: Colors.transparent),
       body:Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 25.0,vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 25.0,vertical: 20),
         child: Column(
           children: AppData.productData
               .map<Widget>(
