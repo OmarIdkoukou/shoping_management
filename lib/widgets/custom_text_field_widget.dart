@@ -12,6 +12,8 @@ Widget buildCustomTextWidget({
   int? maxLength,
   TextEditingController? textEditingController,
   Widget? suffixIcon,
+  double? verticalPadding,
+  double? horizontalPadding,
 }) =>
     TextFormField(
       autovalidateMode: AutovalidateMode.onUserInteraction,
@@ -35,6 +37,6 @@ Widget buildCustomTextWidget({
           fontSize: 15.sp,
         ),
         contentPadding:
-            const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
+             EdgeInsets.symmetric(horizontal:horizontalPadding?? 20, vertical:verticalPadding?? 18),
       ),
     );

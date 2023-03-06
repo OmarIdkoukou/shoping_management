@@ -61,7 +61,7 @@ class SearchScreen extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(vertical: 8.0),
                         child: buildProductBoughtWidget(
                           h: h,
-                          w: w,
+
                           productName: e["productName"],
                           price:e["price"],
                           isDown: true,

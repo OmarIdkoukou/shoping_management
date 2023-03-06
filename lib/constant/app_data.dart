@@ -1,3 +1,5 @@
+import 'package:shopping_managment/constant/colors.dart';
+
 class AppData {
   AppData._();
   static const List<Map<String, dynamic>> productData = [
@@ -89,4 +91,23 @@ class AppData {
       "quantity": "1 small bottle"
     }
   ];
+  static List<Map<String, dynamic>> homeDummyData = [
+    {
+      "thisListBudget": "150",
+      "lastListBudget": "250",
+      "title":"The Last list of month",
+      "price":260,
+      "isDown":true,
+      "colors": [AppColors.primaryColor, AppColors.secondaryColor]
+    },
+    {
+      "thisListBudget": "200",
+      "lastListBudget": "300",
+      "colors": [AppColors.kYellow, AppColors.kYellow],
+      "title":"The optimal list",
+      "isDown":false,
+      "price":150,
+    }
+  ];
+
 }

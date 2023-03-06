@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nb_utils/nb_utils.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../constant/colors.dart';
@@ -29,9 +30,7 @@ class SettingScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
-                height: 0.04 * h,
-              ),
+              (0.04 * h).toInt().height,
               Padding(
                 padding: const EdgeInsets.only(top: 8.0, bottom: 2.0),
                 child: Text(

@@ -5,6 +5,7 @@ import 'package:nb_utils/nb_utils.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shopping_managment/screens/create_new_list_screen.dart';
 import 'package:shopping_managment/screens/create_new_product_screen.dart';
+import 'package:shopping_managment/screens/home_screen.dart';
 import 'package:shopping_managment/screens/search_screen.dart';
 import 'package:shopping_managment/screens/setting_screen.dart';
 import 'package:shopping_managment/screens/update_list_screen.dart';
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
                   navigatorKey: navigatorKey,
                   title: AppConfig.appName,
                   theme: AppTheme.lightTheme(color: snap.data),
-                  home: const UpdateListScreen() //const SplashScreen(),
+                  home: const HomeScreen() //const SplashScreen(),
                   );
             });
       },

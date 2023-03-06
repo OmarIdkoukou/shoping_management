@@ -8,4 +8,6 @@ class AppColors {
   static Color? kGrey = Colors.grey[300];
   static Color kGreen = const Color(0xff00FF8A);
   static Color kRed = const Color(0xffFF0048);
+  static Color kYellow = const Color(0xfff7c413);
+  static Color secondButtonColor = const Color(0xff3c75fd);
 }
