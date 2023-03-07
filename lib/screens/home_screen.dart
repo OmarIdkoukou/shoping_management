@@ -3,15 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:shopping_managment/constant/app_data.dart';
 import 'package:shopping_managment/constant/colors.dart';
+import 'package:shopping_managment/constant/dimentions.dart';
+import 'package:shopping_managment/constant/image_path.dart';
 import 'package:shopping_managment/widgets/custom_text_field_widget.dart';
 import 'package:shopping_managment/widgets/walmart_widget.dart';
 import '../widgets/custom_button_widget.dart';
+import '../widgets/floating_action_button_widget.dart';
 import '../widgets/home_screen_header_widget.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../widgets/my_list_widget.dart';
-import '../widgets/product_bought_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -19,6 +21,53 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: Container(
+        color: Colors.white,
+        height: 10.h,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                  color: AppColors.kGrey,
+                  borderRadius: BorderRadius.circular(kBorderRadius - 5)),
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25),
+                child: Row(
+                  children: [
+                    const ImageIcon(
+                      AssetImage(ImagePath.homeIcon),
+                      size: 15,
+                    ),
+                    10.width,
+                    const Text("Home")
+                  ],
+                ),
+              ),
+            ),
+            (MediaQuery.of(context).size.width * 0.1).toInt().width,
+            Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(kBorderRadius - 5)),
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25),
+                child: Row(
+                  children: [
+                    ImageIcon(
+                      const AssetImage(ImagePath.settingsIcon),
+                      size: 20,
+                      color: AppColors.kGrey,
+                    ),
+                    30.width
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
       body: Stack(
         alignment: const Alignment(0.0, -0.15),
         children: [
@@ -82,11 +131,13 @@ class HomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(30),
                   children: AppData.homeDummyData
                       .map((e) => Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 5.0),
-                        child: myListWidget(
-                    title: e["title"],
-                            h: Device.height, isDown: e["isDown"], price: e["price"]),
-                      ))
+                            padding: const EdgeInsets.symmetric(vertical: 5.0),
+                            child: myListWidget(
+                                title: e["title"],
+                                h: Device.height,
+                                isDown: e["isDown"],
+                                price: e["price"]),
+                          ))
                       .toList(),
                 ),
               )
@@ -131,6 +182,11 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
+      floatingActionButton: buildFloatingActionButton(
+          h: MediaQuery.of(context).size.height,
+          w: MediaQuery.of(context).size.height,
+          iconData: Icons.add),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }

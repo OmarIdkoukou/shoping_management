@@ -4,4 +4,6 @@ class ImagePath {
   static const String barcodeRead = "assets/images/barcode-read.png";
   static const String profileImage = "assets/images/profileImage.jpeg";
   static const String fileImage = "assets/images/FIle.png";
+  static const String homeIcon = "assets/images/home.png";
+  static const String settingsIcon = "assets/images/settings.png";
 }
